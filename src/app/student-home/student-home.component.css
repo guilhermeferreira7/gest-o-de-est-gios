@@ -1,0 +1,19 @@
+.job-card {
+  width: 90% !important;
+}
+
+li {
+  margin-bottom: 10px !important;
+}
+
+.btn-card {
+  width: 80%;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.jobs-container {
+  width: 100% !important;
+}

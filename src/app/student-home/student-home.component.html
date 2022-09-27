@@ -1,0 +1,30 @@
+<div class="container">
+  <h4 class="center">Vagas abertas</h4>
+  <ul class="container row jobs-container">
+    <li *ngFor="let job of jobOpportunities">
+      <div class="col s12 m6">
+        <div class="job-card card">
+          <div class="card-content">
+            <p class="offer-enterprise-card card-title">
+              {{ job.enterprise }}
+            </p>
+            <p class="offer-name-card">{{ job.offer }}</p>
+            <p class="offer-descriprion-card">
+              {{ job.description }}
+            </p>
+            <div class="row">
+              <div class="col s6">
+                <button class="btn btn-card" [disabled]="isUnchanged">
+                  Candidatar
+                </button>
+              </div>
+              <div class="col s6">
+                <button class="btn btn-card">Informações</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
