@@ -13,8 +13,10 @@ interface JobOpportiniy {
 })
 export class StudentHomeComponent implements OnInit {
   jobOpportunities: Array<JobOpportiniy>;
+  isUnchanged: boolean;
 
   constructor() {
+    this.isUnchanged = true;
     this.jobOpportunities = [
       {
         enterprise: 'Empresa X',

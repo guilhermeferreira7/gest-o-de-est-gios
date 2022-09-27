@@ -13,3 +13,7 @@ li {
 .card-title {
   font-weight: bold;
 }
+
+.jobs-container {
+  width: 100% !important;
+}
