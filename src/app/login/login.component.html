@@ -20,7 +20,9 @@
         </div>
       </div>
       <button class="btn waves-effect waves-light">
-        <a routerLink="/aluno/inicio" class="white-text">Entrar</a>
+        <a [routerLink]="['/aluno/', '1', 'inicio']" class="white-text"
+          >Entrar</a
+        >
         <i class="material-icons right">send</i>
       </button>
     </form>

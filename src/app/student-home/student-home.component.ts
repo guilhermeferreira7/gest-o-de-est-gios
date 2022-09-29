@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TJobOffer } from '../Types';
+import { ActivatedRoute } from '@angular/router';
+import { TJobOffer, UserStudent } from '../Types';
 
 @Component({
   selector: 'app-student-home',
@@ -8,8 +9,9 @@ import { TJobOffer } from '../Types';
 })
 export class StudentHomeComponent implements OnInit {
   jobOpportunities: Array<TJobOffer>;
+  user!: UserStudent;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     this.jobOpportunities = [
       {
         enterprise: 'Empresa X',
@@ -29,5 +31,10 @@ export class StudentHomeComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const idParam = this.route.snapshot.params['id'];
+
+    //search student with id
+    this.user = { id: idParam, name: 'Guilherme', email: 'email' };
+  }
 }
