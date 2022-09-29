@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { StudentHomeComponent } from './student-home/student-home.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
+import { JobCardComponent } from './job-card/job-card.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HeaderComponent } from './templates/header/header.component';
     StudentHomeComponent,
     FooterComponent,
     HeaderComponent,
+    JobCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

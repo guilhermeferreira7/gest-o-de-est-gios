@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-interface JobOpportiniy {
-  enterprise: string;
-  offer: string;
-  description: string;
-}
+import { ActivatedRoute } from '@angular/router';
+import { TJobOffer, UserStudent } from '../Types';
 
 @Component({
   selector: 'app-student-home',
@@ -12,11 +8,10 @@ interface JobOpportiniy {
   styleUrls: ['./student-home.component.css'],
 })
 export class StudentHomeComponent implements OnInit {
-  jobOpportunities: Array<JobOpportiniy>;
-  isUnchanged: boolean;
+  jobOpportunities: Array<TJobOffer>;
+  user!: UserStudent;
 
-  constructor() {
-    this.isUnchanged = true;
+  constructor(private route: ActivatedRoute) {
     this.jobOpportunities = [
       {
         enterprise: 'Empresa X',
@@ -36,5 +31,10 @@ export class StudentHomeComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const idParam = this.route.snapshot.params['id'];
+
+    //search student with id
+    this.user = { id: idParam, name: 'Guilherme', email: 'email' };
+  }
 }
