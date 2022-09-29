@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface JobOpportiniy {
-  enterprise: string;
-  offer: string;
-  description: string;
-}
+import { TJobOffer } from '../Types';
 
 @Component({
   selector: 'app-student-home',
@@ -12,11 +7,9 @@ interface JobOpportiniy {
   styleUrls: ['./student-home.component.css'],
 })
 export class StudentHomeComponent implements OnInit {
-  jobOpportunities: Array<JobOpportiniy>;
-  isUnchanged: boolean;
+  jobOpportunities: Array<TJobOffer>;
 
   constructor() {
-    this.isUnchanged = true;
     this.jobOpportunities = [
       {
         enterprise: 'Empresa X',
