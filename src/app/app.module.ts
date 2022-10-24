@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { StudentHomeComponent } from './home-student/student-home.component';
+import { HomeStudentComponent } from './home-student/home-student.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { JobCardComponent } from './job-card/job-card.component';
@@ -13,7 +13,7 @@ import { JobCardComponent } from './job-card/job-card.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    StudentHomeComponent,
+    HomeStudentComponent,
     FooterComponent,
     HeaderComponent,
     JobCardComponent,
