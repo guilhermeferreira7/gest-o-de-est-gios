@@ -1,7 +1,7 @@
 <div class="container">
   <h4 class="center">Login</h4>
   <div class="row">
-    <form class="col s12 center" #form="ngForm">
+    <form class="col s12 center" #form="ngForm" (submit)="onSubmit()">
       <div class="row center">
         <div class="input-field col offset-s3 s6">
           <input
@@ -11,11 +11,22 @@
             class="validate"
             [(ngModel)]="this.user.email"
             required
+            #name="ngModel"
             pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           />
           <label for="email">Email</label>
+          <div class="red-text" [hidden]="name.valid || name.untouched">
+            Email inválido.
+          </div>
+          <div
+            class="red-text"
+            *ngIf="name.errors?.['required'] && name.touched"
+          >
+            Por favor, informe seu email.
+          </div>
         </div>
       </div>
+
       <div class="row">
         <div class="input-field col offset-s3 s6">
           <input
@@ -27,10 +38,12 @@
           <label for="password">Senha</label>
         </div>
       </div>
-      <button class="btn waves-effect waves-light">
-        <a [routerLink]="['/aluno/', '1', 'inicio']" class="white-text"
-          >Entrar</a
-        >
+      <button
+        class="btn waves-effect waves-light"
+        type="submit"
+        [disabled]="!form.valid"
+      >
+        Entrar
         <i class="material-icons right">send</i>
       </button>
     </form>

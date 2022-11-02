@@ -5,7 +5,7 @@ import { StudentHomeComponent } from './student-home/student-home.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'aluno/:id/inicio', component: StudentHomeComponent },
+  { path: 'aluno/inicio', component: StudentHomeComponent },
 ];
 
 @NgModule({

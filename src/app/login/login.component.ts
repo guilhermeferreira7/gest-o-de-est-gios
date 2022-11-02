@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 interface User {
   email: string;
@@ -16,7 +17,13 @@ export class LoginComponent implements OnInit {
 
   user!: User;
 
-  constructor() {}
+  constructor(private router: Router) {
+    this.user = { email: '', password: '' };
+  }
 
   ngOnInit(): void {}
+
+  onSubmit() {
+    this.router.navigate(['aluno/inicio']);
+  }
 }
