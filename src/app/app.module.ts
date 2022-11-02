@@ -8,9 +8,11 @@ import { StudentHomeComponent } from './student-home/student-home.component';
 import { FooterComponent } from './templates/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { JobCardComponent } from './job-card/job-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
+    JobCardComponent,
     AppComponent,
     LoginComponent,
     StudentHomeComponent,
@@ -18,7 +20,7 @@ import { JobCardComponent } from './job-card/job-card.component';
     HeaderComponent,
     JobCardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
