@@ -2,7 +2,7 @@
   <h4 class="center">Login</h4>
   <div class="row">
     <form class="col s12 center" #form="ngForm" (submit)="onSubmit()">
-      <div class="row center">
+      <div class="row">
         <div class="input-field col offset-s3 s6">
           <input
             name="email"
@@ -34,6 +34,9 @@
             name="password"
             type="password"
             class="validate"
+            [(ngModel)]="this.user.password"
+            required
+            #name="ngModel"
           />
           <label for="password">Senha</label>
         </div>
@@ -47,5 +50,11 @@
         <i class="material-icons right">send</i>
       </button>
     </form>
+  </div>
+  <div class="container center">
+    <button class="btn waves-effect waves-light">
+      <a routerLink="cadastro">Cadastrar</a>
+      <i class="material-icons right">person_add</i>
+    </button>
   </div>
 </div>

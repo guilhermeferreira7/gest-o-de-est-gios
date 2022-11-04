@@ -1,11 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-
-interface User {
-  email: string;
-  password: string;
-}
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +14,7 @@ export class LoginComponent implements OnInit {
   user!: User;
 
   constructor(private router: Router) {
-    this.user = { email: '', password: '' };
+    this.user = new User('', '', '');
   }
 
   ngOnInit(): void {}
