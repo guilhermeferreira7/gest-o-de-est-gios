@@ -3,11 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { TJobOffer, UserStudent } from '../Types';
 
 @Component({
-  selector: 'app-student-home',
-  templateUrl: './student-home.component.html',
-  styleUrls: ['./student-home.component.css'],
+  selector: 'app-home-student',
+  templateUrl: './home-student.component.html',
+  styleUrls: ['./home-student.component.css'],
 })
-export class StudentHomeComponent implements OnInit {
+export class HomeStudentComponent implements OnInit {
   jobOpportunities: Array<TJobOffer>;
   user!: UserStudent;
 
