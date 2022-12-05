@@ -1,7 +1,37 @@
 <div class="container">
-  <h4 class="center">Login</h4>
+  <h4 class="center">Criar conta</h4>
   <div class="row">
     <form class="col s12 center" #form="ngForm" (submit)="onSubmit()">
+      <div class="row">
+        <div class="input-field col offset-s3 s6">
+          <input
+            name="name"
+            id="name"
+            type="text"
+            class="validate"
+            [(ngModel)]="this.user.name"
+            required
+            #name="ngModel"
+            pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)+"
+          />
+          <label for="name">Nome</label>
+          <div class="red-text" [hidden]="name.valid || name.untouched">
+            Por favor, informe o seu nome completo.
+          </div>
+          <div
+            class="red-text"
+            *ngIf="name.errors?.['required'] && name.touched"
+          >
+            Por favor, o nome completo é obrigatório.
+          </div>
+          <span
+            class="helper-text"
+            data-error="O campo é inválido"
+            data-success="Ok!"
+          ></span>
+        </div>
+      </div>
+
       <div class="row">
         <div class="input-field col offset-s3 s6">
           <input
@@ -41,20 +71,24 @@
           <label for="password">Senha</label>
         </div>
       </div>
+
+      <div class="row">
+        <div class="input-field col offset-s3 s6">
+          <label>
+            <input type="checkbox" (click)="markAsEnterprise($event)" />
+            <span>Empresa?</span>
+          </label>
+        </div>
+      </div>
+
       <button
         class="btn waves-effect waves-light"
         type="submit"
         [disabled]="!form.valid"
       >
-        Entrar
+        Cadastrar
         <i class="material-icons right">send</i>
       </button>
     </form>
-  </div>
-  <div class="container center">
-    <button class="btn waves-effect waves-light">
-      <a routerLink="cadastro">Cadastrar</a>
-      <i class="material-icons right">person_add</i>
-    </button>
   </div>
 </div>
