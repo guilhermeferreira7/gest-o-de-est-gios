@@ -20,6 +20,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    this.router.navigate(['aluno/inicio']);
+    this.router.navigate([`aluno/${this.user.id}/inicio`]);
   }
 }

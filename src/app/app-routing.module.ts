@@ -8,8 +8,10 @@ import { HomeEnterpriseComponent } from './home-enterprise/home-enterprise.compo
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'aluno/inicio', component: StudentHomeComponent },
+  { path: 'aluno/:id/inicio', component: HomeStudentComponent },
+  { path: 'empresa/:id/inicio', component: HomeEnterpriseComponent },
   { path: 'cadastro', component: SignupComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
