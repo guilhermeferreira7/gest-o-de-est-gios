@@ -18,8 +18,8 @@ https://www.figma.com/file/jBn4JnP3BXjClBTCuLoRqu/sistema-de-estagios
 - [x] Passar dados entre componentes que representam diferentes telas via parâmetros de rotas. (src/app/login)
 - [x] Validar campos do formulário com REGEX e apresentar os erros. (src/app/signup e src/app/login)
 - [x] Desabilitar o botão de submit enquanto o formulário está inválido. (src/app/login)
-- [ ] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
-- [ ] Cadastrar uma entidade usando uma API (JSON Server ou Firebase).
+- [x] Fazer requisições a API com tratamento da resposta com Promises ou Observables.
+- [x] Cadastrar uma entidade usando uma API (JSON Server ou Firebase).
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor. (src/app/home-student)
 - [x] Usar a diretiva ngIf (src/app/login)
 - [ ] Formatar a apresentação de dados com Pipes.
