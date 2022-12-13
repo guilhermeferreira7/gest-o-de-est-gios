@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TJobOffer, UserStudent } from '../Types';
+import { User } from '../model/user';
+import { UserService } from '../services/user.service';
+import { TJobOffer } from '../Types';
 
 @Component({
   selector: 'app-home-student',
@@ -9,9 +11,15 @@ import { TJobOffer, UserStudent } from '../Types';
 })
 export class HomeStudentComponent implements OnInit {
   jobOpportunities: Array<TJobOffer>;
-  user!: UserStudent;
+  user!: User;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private userService: UserService) {
+    const id: number = this.route.snapshot.params['id'];
+
+    this.userService.getById(id).subscribe((res) => {
+      this.user = res;
+    });
+
     this.jobOpportunities = [
       {
         enterprise: 'Empresa X',
@@ -31,10 +39,5 @@ export class HomeStudentComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {
-    const idParam = this.route.snapshot.params['id'];
-
-    //search student with id
-    this.user = { id: idParam, name: 'Guilherme', email: 'email' };
-  }
+  ngOnInit(): void {}
 }

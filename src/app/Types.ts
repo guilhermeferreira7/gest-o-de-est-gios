@@ -3,9 +3,3 @@ export type TJobOffer = {
   offer: string;
   description: string;
 };
-
-export type UserStudent = {
-  id: number;
-  name: string;
-  email: string;
-};
