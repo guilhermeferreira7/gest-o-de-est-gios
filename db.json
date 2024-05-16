@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": "590",
+      "name": "Guilherme Ferreira",
+      "email": "guilhermeribas.2019@alunos.utfpr.edu.br",
+      "password": "123123",
+      "isEnterprise": true
+    },
+    {
+      "id": "491",
+      "name": "Guilherme Ferreira",
+      "email": "guilhermeribas.2019@alunos.utfpr.edu.br",
+      "password": "321321"
+    },
+    {
+      "id": "840",
+      "name": "AAA Ferreira",
+      "email": "guilhermeribas.2019@alunos.utfpr.edu.br",
+      "password": "aasdas"
+    },
+    {
+      "id": "621",
+      "name": "Guilherme Ferreira",
+      "email": "guilhermeribas.2019@alunos.utfpr.edu.br",
+      "password": "123123"
+    },
+    {
+      "id": "35",
+      "name": "Guilherme Ferreira",
+      "email": "guilhermeribas.2019@alunos.utfpr.edu.br",
+      "password": "asdas"
+    },
+    {
+      "id": "582",
+      "name": "Guilherme Ferreira",
+      "email": "asdasd@a.ca",
+      "password": "asdas"
+    }
+  ]
+}
